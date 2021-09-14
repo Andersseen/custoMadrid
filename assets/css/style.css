@@ -156,7 +156,7 @@ header.page__header{
 
 .header__menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     position: absolute;
     bottom: 0;
@@ -167,7 +167,7 @@ header.page__header{
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 10vh;
     z-index: 100;
 
     -webkit-animation-name: navbar__down;
@@ -180,7 +180,7 @@ header.page__header{
 }
 
 .header__menu.fixed .image__logo{
-    width: 7%;
+    width: 5%;
 }
 
 .image__logo{
@@ -223,6 +223,10 @@ main.page__main{
 }
     /* start HERO SECTION */
 .hero__section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
     height: 110vh;
     width: 100%;
 
@@ -231,6 +235,106 @@ main.page__main{
     background-size: cover;
     background-position: center;
 }
+.hero__title{
+    width: 20%;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+
+    color: var(--white-color);
+
+    text-shadow: 3px 3px 3px var(--black-color);
+}
+
+/* BUTTON HERO */
+/* .hero__btn{
+    border: 0;
+    background-color: transparent;
+
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white-color);
+
+    text-shadow: 2px 2px 2px var(--main-color);
+} */
+
+button.hero__btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    width: 12rem;
+    height: auto;
+}
+button.hero__btn .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--main-color);
+  border-radius: 1.625rem;
+}
+button.hero__btn .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: var(--white-color);
+}
+button.hero__btn .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.7rem;
+  width: 1.4rem;
+  height: 0.2rem;
+  background: none;
+}
+button.hero__btn .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.3rem;
+  right: 0;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.2rem solid var(--white-color);
+  border-right: 0.2rem solid var(--white-color);
+  transform: rotate(45deg);
+}
+button.hero__btn .btn__text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  margin: 0 0 0 4rem;
+  color: var(--white-color);
+  text-shadow: 2px 2px 2px var(--main-color);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: .7;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 180%;
+}
+button:hover .circle .icon.arrow {
+  background: var(--white-color);
+  transform: translate(1rem, 0);
+}
+button:hover .btn__text {
+  color: var(--white-color);
+  text-shadow: 2px 2px 2px var(--black-color);
+}
+
 /* end HERO SECTION */
 
 /* start BLOG SECTION */
