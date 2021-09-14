@@ -3,9 +3,7 @@ window.onscroll = () => {
 
     const navigation = document.querySelector('.header__menu');
 
-    const logo = document.querySelector('.image__logo');
-
-    let scrollNesesary = header.scrollHeight - navigation.scrollHeight;
+    const logo = document.querySelector('#logo');
 
     if (window.scrollY >= header.scrollHeight) {
         navigation.classList.add('fixed');
@@ -16,4 +14,5 @@ window.onscroll = () => {
     }
 
 }
+
 
