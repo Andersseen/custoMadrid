@@ -618,6 +618,20 @@ button:hover .btn__text {
     align-items: center;
     align-self: center;
     align-content: center;
+    transform: translateY(100%);
+
+    transition: transform 1s ease-in-out;
+}
+.footer__box-1.do__anim{
+    transform: translateY(0);
+}
+.footer__box-2.do__anim{
+    transition-delay: .2s;
+    transform: translateY(0);
+}
+.footer__box-3.do__anim{
+    transition-delay: .4s;
+    transform: translateY(0);
 }
 
 .footer__menu{

@@ -1,16 +1,27 @@
 window.onscroll = () => {
     const header = document.querySelector('.page__header');
-
     const navigation = document.querySelector('.header__menu');
+    const footerBoxes = document.querySelectorAll('.footer__box');
 
-    const logo = document.querySelector('#logo');
+    const page = document.querySelector('#page').scrollHeight;
+    let nesesaryScrollForFooter = page - 400;
+
+
+    if (window.scrollY >= nesesaryScrollForFooter) {
+        footerBoxes.forEach(el => {
+            el.classList.add('do__anim');
+        });
+    } else {
+        footerBoxes.forEach(el => {
+            el.classList.remove('do__anim');
+        });
+    }
+
 
     if (window.scrollY >= header.scrollHeight) {
         navigation.classList.add('fixed');
-        logo.classList.add('canOpen');
     } else {
         navigation.classList.remove('fixed');
-        logo.classList.remove('canOpen');
     }
 
 }
@@ -29,6 +40,10 @@ const sr = ScrollReveal({
 sr.reveal('.header__title', { origin: 'bottom' })
 sr.reveal('.header__social', { origin: 'bottom', delay: 200 })
 sr.reveal('.header__subtitle', { origin: 'bottom', delay: 400 })
+
+/* SCROLL HERO */
+sr.reveal('.hero__title', { origin: 'top' })
+sr.reveal('.hero__btn', { origin: 'bottom', delay: 200 })
 
 /*SCROLL BLOG*/
 sr.reveal('.blog__img', { origin: 'right' })
