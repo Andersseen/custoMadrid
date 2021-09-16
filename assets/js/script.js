@@ -4,8 +4,7 @@ window.onscroll = () => {
     const footerBoxes = document.querySelectorAll('.footer__box');
 
     const page = document.querySelector('#page').scrollHeight;
-    let nesesaryScrollForFooter = page - 400;
-
+    let nesesaryScrollForFooter = page - 1100;
 
     if (window.scrollY >= nesesaryScrollForFooter) {
         footerBoxes.forEach(el => {
@@ -24,6 +23,21 @@ window.onscroll = () => {
         navigation.classList.remove('fixed');
     }
 
+}
+
+//MENU BURGER
+
+const iconMenu = document.querySelector('.menu__icon');
+const page = document.querySelector('#page')
+
+if (iconMenu) {
+    const menuBody = document.querySelector('.header__menu');
+    iconMenu.addEventListener('click', (e) => {
+        console.log('click');
+        document.body.classList.toggle('_lock');
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+    });
 }
 
 
