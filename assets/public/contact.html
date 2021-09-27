@@ -9,6 +9,7 @@
 
     <link rel="icon" type="image/png" href="../media/logo.png">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/public.css">
 
     <script defer src="../js/script.js"></script>
     <!--===== SCROLL REVEAL =====-->
@@ -49,6 +50,19 @@
             </nav>
         </header>
 
+        <main>
+            <section class="main__contact public__contact">
+                <h2 class="p-contact__title">Contacta con nosotros</h2>
+                <form class="p-contact__form" action="#" method="post">
+                    <label for="name">Tu nombre</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Tu email</label>
+                    <input type="text" id="email" name="email" required>
+                    <label for="message">Tu mensaje</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <input class="p-contact__submit" type="submit" value="Mandar">
+                </form>
+            </section>
 
         </main>
 

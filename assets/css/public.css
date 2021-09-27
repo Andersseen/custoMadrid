@@ -1,0 +1,98 @@
+/* RUTAS */
+
+/* BLOG */
+
+/* GALLERY */
+
+/* ABOUT US */
+
+/* CONTACT */
+.main__contact{
+    background-color: var(--white-color);
+    height: 110vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-contact__title{
+    font-size: 3rem;
+    color: var(--white-color);
+    text-shadow: 3px 3px 2px var(--black-color),
+                -1px -1px  1px var(--main-color);
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.p-contact__form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+.p-contact__form > *{
+    padding: .5rem;
+    width: 500px;
+    min-width: 300px;
+}
+.p-contact__form > input,
+.p-contact__form > textarea {
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    background-color: var(--black-color);
+    color:  var(--white-color);
+    font-size: 1rem;
+}
+.p-contact__form > input:focus,
+.p-contact__form > textarea:focus {
+    border: 2px solid var(--black-color);
+    background-color: var(--white-color);
+    color: var(--black-color);
+
+}
+.p-contact__form > label{
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+
+.p-contact__form > input.p-contact__submit{
+    margin-top: 2rem;
+    width: 30px;
+    outline: none;
+    border: 3px solid transparent;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.p-contact__form > input.p-contact__submit:hover{
+    border: 3px solid var(--main-color);
+    border-radius: 20px;
+    background-color: var(--white-color);
+    color: var(--main-color);
+
+    transform: translateY(2px);
+    box-shadow: 2px 2px 5px rgba(0 0 0 / .6);
+}
+
+.p-contact__form > input.p-contact__submit:active{
+    border: 3px solid var(--main-color);
+    border-radius: 20px;
+    background-color: var(--white-color);
+    color: var(--main-color);
+
+    transform: translateY(-2px);
+    box-shadow: inset -1px -1px 1px rgba(0 0 0 / 1);
+}
