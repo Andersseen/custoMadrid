@@ -27,17 +27,19 @@ window.onscroll = () => {
 
 //MENU BURGER
 
-const iconMenu = document.querySelector('.menu__icon');
+const iconMenu = document.querySelectorAll('.menu__icon');
 const page = document.querySelector('#page')
 
 if (iconMenu) {
     const menuBody = document.querySelector('.header__menu');
-    iconMenu.addEventListener('click', (e) => {
-        console.log('click');
-        document.body.classList.toggle('_lock');
-        iconMenu.classList.toggle('_active');
-        menuBody.classList.toggle('_active');
-    });
+    iconMenu.forEach(el => {
+        el.addEventListener('click', (e) => {
+            document.body.classList.toggle('_lock');
+            el.classList.toggle('_active');
+            menuBody.classList.toggle('_active');
+        });
+    })
+
 }
 
 

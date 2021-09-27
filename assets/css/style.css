@@ -161,19 +161,66 @@ header.page__header{
 /* start MOBILE ICON */
 .header__menu .menu__icon{
     display: none;
+
+    transition: all 1s ease;
 }
 @media (max-width: 767px) {
+    /* NAV */
+    .menu__list {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--black-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all .3s ease;
+    }
+    
+    .header__menu._active .menu__list{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--black-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        visibility: visible;
+        opacity: 1;
+        z-index: 4;
+
+        transform: translateX(0%);
+    }
+    .header__menu.fixed .image__logo {
+        width: 10%;
+    }
+    .header__menu .mobile__menu{
+        display: block;
+        color: var(--white-color);
+        font-size: 2rem;
+    } 
     .header__menu .menu__icon {
-        z-index: 5;
+
         display: block;
         position: relative;
         width: 30px;
         height: 20px;
         cursor: pointer;
     }
-    .header__menu .image__logo{
-        z-index: 5;
-    }
+    
+    
+    
+
     .header__menu .menu__icon > span,
     .header__menu .menu__icon::before,
     .header__menu .menu__icon::after {
@@ -181,7 +228,6 @@ header.page__header{
         position: absolute;
         height: 10%;
         width: 100%;
-        transition: all 0.3s ease;
         background-color: var(--white-color);
     }
     .header__menu .menu__icon::before,
@@ -199,40 +245,27 @@ header.page__header{
         transform: scale(1) translate(0, -50%);
     }
 
-    /* start TRANSFORM ICON */
-    .header__menu .menu__icon._active::before,
-    .header__menu .menu__icon._active::after {
-        content: "";
-    }
-    .header__menu .menu__icon._active::before {
-        transform: rotate(45deg) translate(5px, 7px);
-    }
-    .header__menu .menu__icon._active::after {
-        transform: rotate(-45deg) translate(5px, -7px);
-    }
-    .header__menu .menu__icon._active > span {
-        opacity: 0;
-    }
-    /* end TRANSFORM ICON */
-    .header__menu._active .menu__list{
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--black-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        visibility: visible;
-        opacity: 1;
-        z-index: 4;
-
-        transition: translateY(0%);
-    }
+    
     .header__menu._active .menu__list .menu__item{
         padding: 1rem 0;
+    }
+    .menu__icon.item__icon{
+        position: absolute;
+        top: 5%;
+        right: 20%;
+    }
+    .menu__icon.item__icon::before,
+    .menu__icon.item__icon::after {
+        content: "";
+    }
+    .menu__icon.item__icon::before {
+        transform: rotate(45deg) translate(5px, 7px);
+    }
+    .menu__icon.item__icon::after {
+        transform: rotate(-45deg) translate(5px, -7px);
+    }
+    .menu__icon.item__icon > span {
+        opacity: 0;
     }
 
 
@@ -887,32 +920,7 @@ button:hover .btn__text {
     .header__subtitle{
         font-size: 1.5rem;
     }
-    /* NAV */
-    .header__menu.fixed .image__logo {
-        width: 10%;
-    }
-    .menu__list {
-        position: fixed;
-        top: -100vh;
-        bottom: 0;
-        width: 100%;
-        background-color: var(--black-color);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        visibility: hidden;
-        opacity: 0;
-        z-index: -1;
-
-        transition: top .3s ease;
-    }
-    .header__menu .mobile__menu{
-        display: block;
-        color: var(--white-color);
-        font-size: 2rem;
-    }
+    
 
     /* HERO */
     .hero__section{
