@@ -67,8 +67,25 @@ p,
 span,
 small,
 a,
-label{
+label,
+button{
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Russo One', sans-serif;
+}   
+p,
+span,
+small,
+a,
+label,
+button{
+    font-family: 'Anton', sans-serif;
 }
 
 /* SCROLLBAR */

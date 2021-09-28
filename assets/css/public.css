@@ -200,7 +200,7 @@ span.arrow:active{
 
 
 @media (max-width: 850px){
-  .container-gallery{
+  .p-gallery__container{
     grid-template-columns: 1fr;
     justify-items: center;
   }
