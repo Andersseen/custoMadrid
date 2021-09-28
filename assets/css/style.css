@@ -89,7 +89,9 @@ label{
 :root {
   --main-color: #d40000;
   --black-color: #4D4D4D;
+  --black-o-color: rgba(77, 77, 77,0);
   --white-color: #D8D8d8;
+  --white-o-color: rgba(216, 216, 216, .5);
 }
 
 /* END ROOT */
