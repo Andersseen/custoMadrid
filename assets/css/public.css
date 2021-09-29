@@ -117,6 +117,26 @@
 
 /* BLOG */
 
+.main__blog{
+    background-color: var(--white-color);
+    width: 100%;
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p-blog__title{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white-color);
+    text-shadow: 2px 2px var(--black-color),
+                -1px -1px var(--black-color);
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
 /* GALLERY */
 
 .main__gallery{
@@ -346,7 +366,6 @@ video.p-about__bg{
     .p-about__box{
         padding: 1rem;
 }
-
 }
 
 /* CONTACT */

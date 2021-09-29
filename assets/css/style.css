@@ -146,7 +146,10 @@ header.page__header{
     margin-top: -5rem;
 
     text-shadow: 4px 4px 4px var(--main-color);
+    z-index: 2;
 }
+
+ /* START ANIMATE SVG */
 .header__social{
     width: 100%;
     display: flex;
@@ -156,7 +159,8 @@ header.page__header{
 }
 .header__social > .img__svg{
     padding: 0 1rem;
-
+    position: relative;
+    overflow: hidden;
 }
 
 .header__social  svg {
@@ -173,10 +177,52 @@ header.page__header{
 
     stroke: var(--white-color);
     fill: var(--black-color);
-    transform: scale(1.1) rotate(-25deg);
+    transform: rotate(-25deg);
 
     transition: all .5s ease;
 }
+
+.img__svg::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--main-color);
+    left: -110%;
+    top: 90%;
+    transform:rotate(45deg);
+}
+.img__svg:hover::before{
+  -webkit-animation: animation 0.5s 1 forwards ease-in-out;
+          animation: animation 0.5s 1 forwards ease-in-out;
+}
+@-webkit-keyframes animation {
+  0%{
+    left: -10%;
+    top: 90%;
+  }50%{
+    left: 15%;
+    top: -30%;
+  }100%{
+    top: 10%;
+    left: 10%;
+  }
+}
+@keyframes animation {
+  0%{
+    left: -10%;
+    top: 90%;
+  }50%{
+    left: 15%;
+    top: -30%;
+  }100%{
+    top: 10%;
+    left: 25%;
+  }
+}
+
+ /* end ANIMATE SVG */
 
 .header__subtitle{
     font-size: 4rem;
