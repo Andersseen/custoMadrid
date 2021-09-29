@@ -56,6 +56,65 @@
 
 /* RUTAS */
 
+.main__roads{
+    background-color: var(--white-color);
+    min-height: 110vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-roads__title{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white-color);
+    text-shadow: 2px 2px var(--black-color),
+                -1px -1px var(--black-color);
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.roads__row{
+  display: flex;
+  justify-content: center;
+}
+.road__iframe{
+  flex: 1;
+  padding: 2rem;
+  
+}
+.road__iframe > iframe{
+  border-radius: 20px;
+  height: 300px;
+  width: 100%;
+}
+.road__wrapper{
+  flex: 1;
+  padding: 5rem;
+}
+.wrapper__title{
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black-color);
+}
+.wrapper__text{
+  text-align: center;
+  font-size: 1rem;
+  color: var(--black-color);
+  padding: 2rem;
+}
+@media (max-width: 768px){
+  .roads__row{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
 /* BLOG */
 
 /* GALLERY */
@@ -235,6 +294,7 @@ span.arrow:active{
 }
 
 .p-contact__form{
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
